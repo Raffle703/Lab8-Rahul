@@ -18,6 +18,6 @@ public class CustomListTest {
         ArrayList<City> cityDataList = new ArrayList<>();
         CustomList cl = new CustomList(null, cityDataList);
         City city = new City("Regina", "SK");
-        cl.add(city);
+        cl.addCity(city);
     }
 }
