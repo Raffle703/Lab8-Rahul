@@ -14,8 +14,8 @@ import java.util.ArrayList;
 
 public class CustomList extends ArrayAdapter<City> {
 
-    private ArrayList<City> cities;
-    private Context context;
+    private final ArrayList<City> cities;
+    private final Context context;
 
     public CustomList(Context context, ArrayList<City> cities) {
         super(context, 0, cities);
@@ -49,11 +49,25 @@ public class CustomList extends ArrayAdapter<City> {
         return cities.size();
     }
 
+    /**
+     * this adds a city object to the list
+     * @param city city to add
+     */
     public void addCity(City city){
-        if (cities.contains(city)) {
-            throw new IllegalArgumentException();
-        }
         cities.add(city);
+    }
+
+    public boolean hasCity(City city) {
+        return false;
+    }
+
+    public void delete(City city) {
+//        if (cities.contains(city)) {
+//            cities.remove(city);
+//        }
+//        else {
+//            throw new IllegalArgumentException();
+//        }
     }
 
 }
